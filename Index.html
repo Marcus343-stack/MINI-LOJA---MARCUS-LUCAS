@@ -3,13 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Acessórios e itens criativos para acompanhar sua rotina.">
-  <title>Vitrine Ipê</title>
+  <meta name="description" content="Ipê & Afeto: acessórios, presentes e pequenos achados para o dia a dia.">
+  <title>Ipê &amp; Afeto | Loja do Marcus Lucas</title>
   <link rel="stylesheet" href="Index.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container header-content">
+      <a class="brand-mark" href="#inicio" aria-label="Ipê & Afeto, início">
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M16 27V13m0 7c-5 0-8-3-8-8 5 0 8 3 8 8Zm0-4c0-5 3-8 8-8 0 5-3 8-8 8Z" />
+        </svg>
+        <span>Ipê <span class="brand-ampersand">&amp;</span> Afeto</span>
+      </a>
       <nav class="site-tabs" role="tablist" aria-label="Seções">
         <button class="tab-button" id="catalog-tab" type="button" role="tab" aria-selected="true" aria-controls="catalog-panel" tabindex="0">Catálogo</button>
         <button class="tab-button" id="registrations-tab" type="button" role="tab" aria-selected="false" aria-controls="registrations-panel" tabindex="-1">Cadastros</button>
@@ -68,9 +74,9 @@
   <main class="container" id="inicio">
     <section class="intro" aria-labelledby="page-title">
       <div class="intro-content">
-        <p class="eyebrow">Objetos que acompanham suas ideias</p>
-        <h1 id="page-title">Vitrine Ipê</h1>
-        <p>Descubra acessórios e itens criativos para deixar sua rotina mais leve.</p>
+        <p class="eyebrow">Acessórios e presentes escolhidos com carinho</p>
+        <h1 id="page-title">Ipê &amp; Afeto</h1>
+        <p>Pequenos achados para deixar sua rotina mais bonita e especial.</p>
         <button class="intro-link" id="show-catalog" type="button">Conhecer a coleção <span aria-hidden="true">→</span></button>
       </div>
     </section>
@@ -91,6 +97,45 @@
     </section>
 
     <section class="tab-panel" id="registrations-panel" role="tabpanel" aria-labelledby="registrations-tab" tabindex="0" hidden>
+      <section class="section auth-gate" id="auth-gate" aria-label="Acesso de funcionário">
+        <div class="form-card">
+          <p class="eyebrow">Acesso da equipe</p>
+          <h2>Entrar</h2>
+          <form id="login-form">
+            <label for="login-email">E-mail</label>
+            <input id="login-email" name="email" type="email" maxlength="120" autocomplete="username" required>
+
+            <label for="login-password">Senha</label>
+            <input id="login-password" name="password" type="password" minlength="8" maxlength="72" autocomplete="current-password" required>
+
+            <button type="submit">Entrar na loja</button>
+            <p class="form-message" id="login-message" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <div class="form-card">
+          <p class="eyebrow">Faça parte da equipe</p>
+          <h2>Cadastrar funcionário</h2>
+          <form id="employee-form">
+            <label for="employee-name">Nome</label>
+            <input id="employee-name" name="name" type="text" maxlength="100" autocomplete="name" required>
+
+            <label for="employee-cpf">CPF</label>
+            <input id="employee-cpf" name="cpf" type="text" inputmode="numeric" autocomplete="off" placeholder="000.000.000-00" maxlength="14" required>
+
+            <label for="employee-email">E-mail</label>
+            <input id="employee-email" name="email" type="email" maxlength="120" placeholder="nome@exemplo.com" autocomplete="email" required>
+
+            <label for="employee-password">Senha (mínimo 8 caracteres)</label>
+            <input id="employee-password" name="password" type="password" minlength="8" maxlength="72" autocomplete="new-password" required>
+
+            <button type="submit">Cadastrar e entrar</button>
+            <p class="form-message" id="employee-message" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+      <div id="management-content" hidden>
       <section class="section forms-section" aria-label="Cadastros">
         <div class="form-card" id="cadastro-produto">
           <p class="eyebrow">Produtos</p>
@@ -108,26 +153,11 @@
             <label for="product-description">Descrição</label>
             <textarea id="product-description" name="description" rows="3" maxlength="240" required></textarea>
 
+            <label for="product-image">Foto do produto (JPG, PNG, WEBP ou GIF; até 5 MB)</label>
+            <input id="product-image" name="image" type="file" accept="image/jpeg,image/png,image/webp,image/gif" required>
+
             <button type="submit">Adicionar produto</button>
             <p class="form-message" id="product-message" role="status" aria-live="polite"></p>
-          </form>
-        </div>
-
-        <div class="form-card" id="cadastro-funcionario">
-          <p class="eyebrow">Equipe</p>
-          <h2>Cadastrar funcionário</h2>
-          <form id="employee-form">
-            <label for="employee-name">Nome</label>
-            <input id="employee-name" name="name" type="text" maxlength="100" required>
-
-            <label for="employee-cpf">CPF</label>
-            <input id="employee-cpf" name="cpf" type="text" inputmode="numeric" autocomplete="off" placeholder="000.000.000-00" maxlength="14" required>
-
-            <label for="employee-email">E-mail</label>
-            <input id="employee-email" name="email" type="email" maxlength="120" placeholder="nome@exemplo.com" required>
-
-            <button type="submit">Cadastrar funcionário</button>
-            <p class="form-message" id="employee-message" role="status" aria-live="polite"></p>
           </form>
         </div>
       </section>
@@ -138,6 +168,7 @@
             <p class="eyebrow">Gerenciamento</p>
             <h2 id="product-admin-title">Produtos cadastrados</h2>
           </div>
+          <button id="logout-button" class="logout-button" type="button">Sair da conta</button>
           <span class="item-count" id="product-admin-count" aria-live="polite"></span>
         </div>
         <div class="table-wrap">
@@ -180,24 +211,43 @@
         </div>
         <p class="form-message section-message" id="employee-delete-message" role="status" aria-live="polite"></p>
       </section>
+      </div>
     </section>
   </main>
 
   <script>
     const apiUrl = "Cadastro.php";
     const currency = new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" });
+    const uploadedImagePattern = /^uploads\/[a-f0-9]{32}\.(jpg|png|webp|gif)$/;
     const availableIllustrations = new Set([
       "shirt", "mug", "notebook", "bottle", "tote", "case", "cap", "keyring", "calendar", "backpack", "package"
     ]);
+    const catalogImagePaths = {
+      shirt: "assets/products/shirt.svg",
+      mug: "assets/products/mug.svg",
+      notebook: "assets/products/notebook.svg",
+      bottle: "assets/products/bottle.svg",
+      tote: "assets/products/tote.svg",
+      case: "assets/products/case.svg",
+      cap: "assets/products/cap.svg",
+      keyring: "assets/products/keyring.svg",
+      calendar: "assets/products/calendar.svg",
+      backpack: "assets/products/backpack.svg"
+    };
     const apiMessage = document.getElementById("api-message");
     let products = [];
     let employees = [];
+    let authenticated = false;
 
     async function requestApi(method, payload = null, query = "") {
       const options = { method, headers: {} };
       if (payload !== null) {
-        options.headers["Content-Type"] = "application/json";
-        options.body = JSON.stringify(payload);
+        if (payload instanceof FormData) {
+          options.body = payload;
+        } else {
+          options.headers["Content-Type"] = "application/json";
+          options.body = JSON.stringify(payload);
+        }
       }
 
       const response = await fetch(query ? `${apiUrl}?${query}` : apiUrl, options);
@@ -231,6 +281,24 @@
       return illustration;
     }
 
+    function makeProductVisual(product, className) {
+      const visual = document.createElement("div");
+      const illustrationName = availableIllustrations.has(product.illustration) ? product.illustration : "package";
+      visual.className = `${className} visual-${illustrationName}`;
+      const uploadedImage = typeof product.image_path === "string" && uploadedImagePattern.test(product.image_path);
+      const imagePath = uploadedImage ? product.image_path : catalogImagePaths[illustrationName];
+      if (imagePath) {
+        const image = document.createElement("img");
+        image.className = "product-photo";
+        image.src = imagePath;
+        image.alt = `${uploadedImage ? "Foto" : "Ilustração"} de ${product.name}`;
+        visual.append(image);
+      } else {
+        visual.append(makeIllustration(illustrationName));
+      }
+      return visual;
+    }
+
     function renderProducts() {
       const list = document.getElementById("product-list");
       const managementList = document.getElementById("product-admin-list");
@@ -238,12 +306,9 @@
       managementList.replaceChildren();
 
       products.forEach((product) => {
-        const illustrationName = availableIllustrations.has(product.illustration) ? product.illustration : "package";
         const card = document.createElement("article");
         card.className = "product-card";
-        const visual = document.createElement("div");
-        visual.className = `product-visual visual-${illustrationName}`;
-        visual.append(makeIllustration(illustrationName));
+        const visual = makeProductVisual(product, "product-visual");
         const title = document.createElement("h3");
         title.textContent = product.name;
         const description = document.createElement("p");
@@ -258,9 +323,7 @@
         const productCell = document.createElement("td");
         const productInfo = document.createElement("div");
         productInfo.className = "management-product";
-        const thumbnail = document.createElement("div");
-        thumbnail.className = `product-thumb visual-${illustrationName}`;
-        thumbnail.append(makeIllustration(illustrationName));
+        const thumbnail = makeProductVisual(product, "product-thumb");
         const details = document.createElement("div");
         const managementName = document.createElement("strong");
         managementName.textContent = product.name;
@@ -295,6 +358,11 @@
     function renderEmployees() {
       const list = document.getElementById("employee-list");
       list.replaceChildren();
+      if (!authenticated) {
+        document.getElementById("employee-empty").hidden = false;
+        document.getElementById("employee-count").textContent = "";
+        return;
+      }
       employees.forEach((employee) => {
         const row = document.createElement("tr");
         [employee.name, employee.cpf, employee.email].forEach((value) => {
@@ -325,6 +393,9 @@
       }
       products = data.products;
       employees = data.employees;
+      authenticated = data.authenticated === true;
+      document.getElementById("auth-gate").hidden = authenticated;
+      document.getElementById("management-content").hidden = !authenticated;
       renderProducts();
       renderEmployees();
       showApiMessage("");
@@ -338,14 +409,13 @@
       const submitButton = form.querySelector('button[type="submit"]');
       submitButton.disabled = true;
       try {
-        await requestApi("POST", {
-          type: "product",
-          name: data.get("name").trim(),
-          price: Number(data.get("price")),
-          description: data.get("description").trim()
-        });
+        data.set("type", "product");
+        data.set("name", data.get("name").trim());
+        data.set("price", String(Number(data.get("price"))));
+        data.set("description", data.get("description").trim());
+        await requestApi("POST", data);
         form.reset();
-        message.textContent = "Produto salvo no banco de dados.";
+        message.textContent = "Produto e imagem salvos no banco de dados.";
         await refreshData();
       } catch (error) {
         message.textContent = error.message;
@@ -374,15 +444,52 @@
           type: "employee",
           name: data.get("name").trim(),
           cpf: data.get("cpf"),
-          email: data.get("email").trim()
+          email: data.get("email").trim(),
+          password: data.get("password")
         });
         form.reset();
-        message.textContent = "Funcionário salvo no banco de dados.";
+        message.textContent = "Conta criada. Você entrou na área da equipe.";
         await refreshData();
       } catch (error) {
         message.textContent = error.message;
       } finally {
         submitButton.disabled = false;
+      }
+    });
+
+    document.getElementById("login-form").addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const form = event.currentTarget;
+      const data = new FormData(form);
+      const message = document.getElementById("login-message");
+      const submitButton = form.querySelector('button[type="submit"]');
+      submitButton.disabled = true;
+      try {
+        await requestApi("POST", {
+          type: "login",
+          email: data.get("email").trim(),
+          password: data.get("password")
+        });
+        form.reset();
+        message.textContent = "";
+        await refreshData();
+      } catch (error) {
+        message.textContent = error.message;
+      } finally {
+        submitButton.disabled = false;
+      }
+    });
+
+    document.getElementById("logout-button").addEventListener("click", async () => {
+      const button = document.getElementById("logout-button");
+      button.disabled = true;
+      try {
+        await requestApi("POST", { type: "logout" });
+        await refreshData();
+      } catch (error) {
+        showApiMessage(error.message, true);
+      } finally {
+        button.disabled = false;
       }
     });
 

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300">
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#f9edda"/><stop offset="1" stop-color="#f0ddc4"/></linearGradient>
+    <linearGradient id="cup" x2="0" y2="1"><stop stop-color="#fffdf5"/><stop offset="1" stop-color="#e9e2d1"/></linearGradient>
+    <filter id="shadow" x="-.3" y="-.2" width="1.6" height="1.6"><feDropShadow dx="0" dy="9" stdDeviation="9" flood-color="#82664d" flood-opacity=".2"/></filter>
+  </defs>
+  <rect width="420" height="300" rx="18" fill="url(#bg)"/>
+  <circle cx="94" cy="72" r="49" fill="#e6bf77" opacity=".48"/>
+  <circle cx="332" cy="226" r="59" fill="#fff8eb" opacity=".58"/>
+  <path d="M181 65c-18-18 17-24 0-44m38 43c-17-18 17-24 0-44m37 45c-18-18 17-24 0-44" fill="none" stroke="#a98660" stroke-linecap="round" stroke-width="5" opacity=".55"/>
+  <ellipse cx="205" cy="247" rx="102" ry="13" fill="#765e47" opacity=".13"/>
+  <g filter="url(#shadow)" stroke="#a99b83" stroke-linejoin="round" stroke-width="3">
+    <path d="M123 83h150v111a32 32 0 0 1-32 32h-86a32 32 0 0 1-32-32z" fill="url(#cup)"/>
+    <path d="M273 111h27a35 35 0 0 1 0 70h-27" fill="none" stroke="#d7cdb9" stroke-width="17"/>
+    <path d="M273 119h26a27 27 0 0 1 0 54h-26" fill="none" stroke="#fffdf5" stroke-width="9"/>
+    <path d="M138 102h121" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="5"/>
+    <path d="M174 151c15-17 36-19 57-10-10 23-31 34-57 29m26-17-17 24" fill="#a5a96f" stroke="#7b845a" stroke-width="2"/>
+  </g>
+</svg>

@@ -1,14 +1,14 @@
 :root {
   color-scheme: light;
   font-family: "Segoe UI", Arial, Helvetica, sans-serif;
-  color: #332a2b;
-  background: #fbf7f3;
+  color: #343a30;
+  background: #faf8f1;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
-  --brand: #a64e3c;
-  --brand-dark: #773b38;
-  --muted: #75686a;
-  --line: #eadfe0;
+  --brand: #58744e;
+  --brand-dark: #3e5e40;
+  --muted: #746f64;
+  --line: #e5e0d1;
 }
 
 * {
@@ -38,8 +38,38 @@ body {
   min-height: 72px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 24px;
+}
+
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #354b37;
+  font-size: 1.05rem;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.brand-mark > svg {
+  width: 38px;
+  height: 38px;
+  padding: 6px;
+  color: var(--brand-dark);
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+  background: #edf1e7;
+  border-radius: 50%;
+}
+
+.brand-ampersand {
+  color: #b36b46;
 }
 
 nav {
@@ -52,7 +82,7 @@ nav {
 .tab-button {
   min-height: 42px;
   padding: 9px 18px;
-  color: #5d4c50;
+  color: #4f5d4d;
   font-size: 0.92rem;
   font-weight: 600;
   background: transparent;
@@ -65,7 +95,7 @@ nav {
 .tab-button:hover,
 .tab-button:focus-visible {
   color: var(--brand-dark);
-  background: #f7e9e5;
+  background: #edf1e7;
 }
 
 .tab-button[aria-selected="true"] {
@@ -109,8 +139,8 @@ nav {
   overflow: hidden;
   margin: 34px 0 30px;
   padding: clamp(32px, 6vw, 64px);
-  background: linear-gradient(115deg, #f3e4dc 0%, #fbf0e8 58%, #ead8d0 100%);
-  border: 1px solid #ead6ce;
+  background: linear-gradient(115deg, #e5eddf 0%, #f5f0e2 58%, #e8ebdc 100%);
+  border: 1px solid #d5e0cf;
   border-radius: 18px;
 }
 
@@ -120,7 +150,7 @@ nav {
   right: 7%;
   width: 310px;
   height: 310px;
-  background: radial-gradient(circle, rgb(166 78 60 / 16%) 0 48%, transparent 49%);
+  background: radial-gradient(circle, rgb(88 116 78 / 16%) 0 48%, transparent 49%);
   content: "";
 }
 
@@ -148,7 +178,7 @@ p {
 
 h1 {
   margin-bottom: 14px;
-  color: #382d30;
+  color: #2f3e31;
   font-size: clamp(2.15rem, 5vw, 3.2rem);
   letter-spacing: -0.04em;
 }
@@ -156,7 +186,7 @@ h1 {
 .intro-content > p:not(.eyebrow) {
   max-width: 520px;
   margin-bottom: 22px;
-  color: #6f5f61;
+  color: #65715e;
   line-height: 1.6;
 }
 
@@ -257,6 +287,19 @@ h1 {
   stroke-linejoin: round;
   stroke-width: 2;
   filter: drop-shadow(0 6px 5px rgb(51 42 43 / 12%));
+}
+
+.product-photo {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-thumb .product-photo {
+  width: 100%;
+  height: 100%;
 }
 
 .visual-shirt {
@@ -417,6 +460,19 @@ h1 {
   gap: 22px;
 }
 
+.auth-gate {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 22px;
+}
+
+.logout-button {
+  min-height: 38px;
+  padding: 8px 13px;
+  font-size: 0.86rem;
+}
+
 .form-card {
   padding: 27px;
   background: #fff;
@@ -445,7 +501,7 @@ textarea {
   width: 100%;
   margin-bottom: 16px;
   padding: 12px 13px;
-  color: #332a2b;
+  color: #343a30;
   font: inherit;
   background: #fff;
   border: 1px solid #d9c9c8;
@@ -500,6 +556,11 @@ button:focus-visible {
   outline-offset: 2px;
 }
 
+button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
 .form-message {
   min-height: 1.2em;
   margin: 12px 0 0;
@@ -509,7 +570,7 @@ button:focus-visible {
 
 .table-wrap {
   overflow-x: auto;
-  background: #fff;
+  background: #fffefa;
   border: 1px solid var(--line);
   border-radius: 10px;
   box-shadow: 0 5px 16px rgb(71 43 48 / 5%);
@@ -540,9 +601,9 @@ td {
 }
 
 th {
-  color: #5d4c50;
+  color: #4f5d4d;
   font-size: 0.86rem;
-  background: #fbf7f5;
+  background: #f8f7ef;
 }
 
 tbody tr:last-child td {
@@ -565,6 +626,19 @@ tbody tr:last-child td {
   .header-content {
     min-height: 64px;
     padding: 9px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px 10px;
+  }
+
+  .brand-mark {
+    gap: 7px;
+    font-size: 0.9rem;
+  }
+
+  .brand-mark > svg {
+    width: 32px;
+    height: 32px;
   }
 
   nav {
@@ -573,8 +647,8 @@ tbody tr:last-child td {
 
   .tab-button {
     min-height: 40px;
-    padding: 8px 13px;
-    font-size: 0.84rem;
+    padding: 8px 10px;
+    font-size: 0.8rem;
   }
 
   .intro {
@@ -593,6 +667,10 @@ tbody tr:last-child td {
   }
 
   .forms-section {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-gate {
     grid-template-columns: 1fr;
   }
 

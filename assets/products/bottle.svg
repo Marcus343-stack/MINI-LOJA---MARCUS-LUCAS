@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300">
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#e2eeee"/><stop offset="1" stop-color="#d2e3df"/></linearGradient>
+    <linearGradient id="steel" x2="1"><stop stop-color="#6c9690"/><stop offset=".45" stop-color="#b9d1c6"/><stop offset="1" stop-color="#658981"/></linearGradient>
+    <filter id="shadow" x="-.3" y="-.2" width="1.6" height="1.6"><feDropShadow dx="0" dy="10" stdDeviation="9" flood-color="#466b66" flood-opacity=".22"/></filter>
+  </defs>
+  <rect width="420" height="300" rx="18" fill="url(#bg)"/>
+  <circle cx="95" cy="73" r="48" fill="#fffdf0" opacity=".65"/>
+  <circle cx="333" cy="222" r="59" fill="#aac8bf" opacity=".48"/>
+  <path d="M80 236c21-15 29-34 25-56m0 22c14-13 18-27 15-40m202 64c-14-13-19-28-15-45" fill="none" stroke="#819b78" stroke-linecap="round" stroke-width="4" opacity=".6"/>
+  <ellipse cx="211" cy="252" rx="66" ry="12" fill="#426d65" opacity=".15"/>
+  <g filter="url(#shadow)" stroke="#567870" stroke-linejoin="round" stroke-width="3">
+    <path d="M186 49h49v29l16 18v121a22 22 0 0 1-22 22h-37a22 22 0 0 1-22-22V96l16-18z" fill="url(#steel)"/>
+    <path d="M186 63h49m-64 63h79" fill="none" stroke="#d8e6dc" stroke-linecap="round" stroke-width="4"/>
+    <path d="M190 42h41v20h-41z" fill="#526f61"/>
+    <path d="M191 146c12-12 28-12 41 0m-41 19c12-12 28-12 41 0" fill="none" stroke="#e8f0df" stroke-width="3" opacity=".8"/>
+    <path d="M209 110c-8 9-9 17-2 24 7-7 8-15 2-24Zm14 13c-8 9-9 17-2 24 7-7 8-15 2-24Z" fill="#edf1dc" stroke="#edf1dc" stroke-width="1"/>
+  </g>
+</svg>

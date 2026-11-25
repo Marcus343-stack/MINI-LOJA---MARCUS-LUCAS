@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300">
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#f6e8df"/><stop offset="1" stop-color="#efded0"/></linearGradient>
+    <linearGradient id="canvas" x2="0" y2="1"><stop stop-color="#fff7e7"/><stop offset="1" stop-color="#e9d8bd"/></linearGradient>
+    <filter id="shadow" x="-.3" y="-.2" width="1.6" height="1.6"><feDropShadow dx="0" dy="10" stdDeviation="9" flood-color="#765744" flood-opacity=".2"/></filter>
+  </defs>
+  <rect width="420" height="300" rx="18" fill="url(#bg)"/>
+  <circle cx="86" cy="73" r="45" fill="#fff9ef" opacity=".72"/>
+  <circle cx="338" cy="224" r="59" fill="#e5c4ad" opacity=".48"/>
+  <ellipse cx="211" cy="251" rx="101" ry="13" fill="#775845" opacity=".14"/>
+  <g filter="url(#shadow)" stroke="#a88e6c" stroke-linejoin="round" stroke-width="3">
+    <path d="M145 103V76a35 35 0 0 1 70 0v27m-45 0V76a10 10 0 0 1 20 0v27" fill="none" stroke="#8a6c4e" stroke-width="8"/>
+    <path d="M118 101h184l-15 129H133z" fill="url(#canvas)"/>
+    <path d="m130 116 11 101m137-101-11 101" fill="none" stroke="#d4c2a5" stroke-width="2"/>
+    <path d="M185 176c-1-24 14-40 37-44 3 22-10 39-37 44Zm-3-7c-18-16-19-34-7-51 18 11 23 30 7 51Zm5-5 25-22" fill="#82906a" stroke="#70815b" stroke-width="2"/>
+    <path d="M171 202h75" fill="none" stroke="#d4c2a5" stroke-width="2"/>
+  </g>
+</svg>
